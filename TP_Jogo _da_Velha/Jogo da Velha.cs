@@ -16,7 +16,7 @@ namespace TP_Jogo__da_Velha
         string jogador1 = "X";
         string jogador2 = "O";
         int contador = 0;
-        string vencedor;
+        
 
 
         public Jogo_da_Velha()
@@ -357,56 +357,52 @@ namespace TP_Jogo__da_Velha
                 if (tabuleiro[i, 0] == "X" && tabuleiro[i, 1] == "X" && tabuleiro[i, 2] == "X")
                 {
                     MessageBox.Show($"Jogador 1 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (tabuleiro[i, 0] == "O" && tabuleiro[i, 1] == "O" && tabuleiro[i, 2] == "O")
                 {
                     MessageBox.Show($"Jogador 2 - Venceu");
-                    finishGame();
+                    Clear();
                 }
 
                 if (tabuleiro[0, i] == "X" && tabuleiro[1, i] == "X" && tabuleiro[2, i] == "X")
                 {
                     MessageBox.Show($"Jogador 1 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (tabuleiro[0, i] == "O" && tabuleiro[1, i] == "O" && tabuleiro[2, i] == "O")
                 {
                     MessageBox.Show($"Jogador 2 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (tabuleiro[0, 0] == "X" && tabuleiro[1, 1] == "X" && tabuleiro[2, 2] == "X")
                 {
                     MessageBox.Show($"Jogador 1 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (tabuleiro[0, 0] == "O" && tabuleiro[1, 1] == "O" && tabuleiro[2, 2] == "O")
                 {
                     MessageBox.Show($"Jogador 2 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (tabuleiro[0, 2] == "X" && tabuleiro[1, 1] == "X" && tabuleiro[2, 0] == "X")
                 {
                     MessageBox.Show($"Jogador 1 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (tabuleiro[0, 2] == "O" && tabuleiro[1, 1] == "O" && tabuleiro[2, 0] == "O")
                 {
                     MessageBox.Show($"Jogador 2 - Venceu");
-                    finishGame();
+                    Clear();
                 }
                 if (contador == 9)
                 {
                     MessageBox.Show($"Empatou");
-                    finishGame();
+                    Clear();
                 }
             }
         }
-        private void finishGame()
-        {
-            Clear();
-            contador = 0;
-        }
+        
 
         private void Clear()
         {
@@ -420,6 +416,7 @@ namespace TP_Jogo__da_Velha
             btn_7.Text = String.Empty;
             btn_8.Text = String.Empty;
             btn_9.Text = String.Empty;
+            contador = 0;
         }
 
        
